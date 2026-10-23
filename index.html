@@ -1,70 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nour Academy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102f70">
+  <meta name="description" content="Nour Academy : cours de soutien scolaire et langues à Nador, du primaire au Bac.">
+  <title>Nour Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header >
-        <nav class="bg-[#05096B] h-15 flex items-center justify-between ">
-            <div class="flex items-center text-white">
-                <img class="w-18 px-4 mx-auto" src="images/noor_academy_2026.webp" alt="logo">
-                <a class="" href="index.html">Nour Academy</a>
-            </div>
-            <ul class="p-2">
-                <button class="bg-[#FCCA46] text-black rounded-4xl mx-auto w-20 h-9 text-[10px]">Mon panier  (0)</button>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <div class="bg-[url('/images/banner_sans_texte.webp')] bg-cover bg-center bg-no-repeat h-55 w-132 md:h-150 md:w-384">
-                <p class="px-6 pt-12 text-[#FCCA46] text-[7px] md:px-18 md:pt-28 md:text-[32px]">VOTRE RÉUSSITE, NOTRE PRIORITÉ</p>
-                <h1 class="px-6 w-70 font-bold text-[20px] text-white md:px-18 md:text-[55px] md:w-200">Construisez votre avenir avec <span class="text-[#FCCA46]">Nour Academy</span>.</h1>
-                <p class="px-6 pb-3 font-semibold text-[8px] text-white md:px-18 md:text-[23px] md:pb-6">Un accompagnement scolaire adapté du primaire au Bac.</p>
-                <button class="px-6 rounded-full h-7 w-38 mx-8 font-normal text-[10px] text-black bg-[#FCCA46] md:px-20 md:p-0 md:mx-25 md:w-92 md:h-10 md:text-[20px]">S’inscrire maintenant →</button>
-            </div>
-        </section>
-        <section class="bg-[#0B2C57] h-screen">
-            <h1 class="px-40 w-[551px] text-center pt-5 font-bold text-[20px] text-[#FCCA46] md:px-120 md:pt-13 md:text-[55px] md:w-full">Nos niveaux scolaires</h1>
-            <div class="flex px-13 gap-15 pb-5 bg-white pt-5 text-black font-semibold text-[14px] rounded-b-4xl border mx-auto ">
-                <select class="bg-[#D9D9D9] pt-3 pb-3 rounded-2xl " name="text" id="">
-                    <option class="hidden" value="text">Sélection des niveaux</option>
-                    <option value="">Primaire</option>
-                    <option value="">Collège</option>
-                    <option value="">Lycée</option>
-                </select>
-                <select class="bg-[#D9D9D9] pt-3 pb-3 rounded-2xl " name="text" id="">
-                    <option class="hidden" value="text">Choix des matériaux</option>
-                    <option value="text">Mathématiques</option>
-                    <option value="text">Français</option>
-                    <option value="text">Physique-Chimie</option>
-                    <option value="text">Arabe</option>
-                    <option value="text">SVT</option>
-                    <option value="text">Anglais</option>
-                    <option value="text">Préparation Bac Maths</option>
-                    <option value="text">Préparation Bac Physique</option>
-                    <option value="text">Sciences naturelles</option>
-                    <option value="text">Anglais — Conversation</option>
-                    <option value="text">Révisions intensives</option>
-                    <option value="text">Lecture et expression</option>
-                    <option value="text">Histoire-Géographie</option>
-                    <option value="text">Économie et Comptabilité</option>
-                </select>
-            </div>
-            <div>
-                
-            </div>
-        </section>
+<body class="min-h-screen bg-[#0b2e59] font-sans text-white">
 
-    </main>
+  <!-- HEADER -->
+  <header class="bg-[#102f70] h-16">
+    <nav class="mx-3  flex items-center justify-between gap-7 px-4 sm:px-6 lg:px-8">
+
+      <div class="flex items-center  gap-2">
+        <a href="index.html"><img class="w-10 h-10" src="images/noor_academy_2026.webp" alt="logo"></a>
+        <a class="text-sm font-extrabold sm:text-base" href="index.html">Nour Academy</a>
+      </div>
+
+      <a href="#catalogue"
+        class="inline-flex min-h-11 items-center justify-between rounded-full bg-[#ffd34e] px-4 text-sm font-bold text-[#102f70] transition hover:bg-[#ffd34e] sm:px-6">
+        Mon panier (0)
+      </a>
+
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="px-4 sm:px-6 lg:px-8">
+      <div
+        class="relative mx-auto flex min-h-[400px] max-w-7xl items-center overflow-hidden bg-[#0b2e59] bg-[url('images/banner_sans_texte.webp')] bg-cover bg-[center_65%] bg-no-repeat sm:min-h-[480px] lg:min-h-[560px] lg:bg-center">
+
+        <div class="relative z-10 w-full max-w-2xl px-1 py-10 sm:px-4 sm:py-12 lg:max-w-[58%] lg:py-16">
+          <p
+            class="text-[10px] font-bold uppercase tracking-[0.15em] text-[#ffd34e] sm:text-xs sm:tracking-[0.18em] lg:text-sm">
+            Votre réussite, notre priorité
+          </p>
+          <h1 class="mt-4 max-w-xl text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl">
+            Construisez votre avenir avec
+            <span class="text-[#ffd34e]">Nour Academy.</span>
+          </h1>
+          <p class="mt-4 max-w-lg text-sm leading-6 text-blue-100 sm:text-base sm:leading-7">
+            Des cours de soutien scolaire et de langues pour accompagner chaque élève du primaire au Bac.
+          </p>
+          <a href="#catalogue"
+            class="mt-6 inline-flex min-h-11 max-w-full items-center justify-center rounded-full bg-[#ffd34e] px-5 py-2 text-center text-xs font-extrabold text-[#102f70] transition hover:bg-yellow-300 sm:px-6 sm:text-sm">
+            Découvrir nos cours →
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="catalogue" class="bg-[#0b2e59] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <div class="mx-auto max-w-6xl">
+        <div class="mx-auto mb-8 max-w-2xl text-center">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#ffd34e]">
+            Choisissez votre parcours
+          </p>
+          <h2 class="mt-2 text-2xl font-extrabold sm:text-3xl lg:text-4xl">
+            Nos cours de soutien scolaire
+          </h2>
+          <p class="mt-3 text-sm leading-6 text-blue-100 sm:text-base">
+            Trouvez la matière et le niveau qui correspondent aux besoins de votre enfant.
+          </p>
+        </div>
+        <!-- FILTRES -->
+        <div id="filtres"
+          class="mb-6 grid grid-cols-1 gap-4 rounded-xl bg-white p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
+
+          <div class="min-w-0">
+            <label for="filtre-niveau" class="mb-2 block text-sm font-bold text-[#102f70]">
+              Niveau scolaire
+            </label>
+            <select id="filtre-niveau" name="niveau"
+              class="min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:outline-2 focus:outline-[#102f70]">
+              <option value="">Tous les niveaux</option>
+              <option value="primaire">Primaire</option>
+              <option value="college">Collège</option>
+              <option value="lycee">Lycée</option>
+              <option value="bac">2e Bac</option>
+            </select>
+          </div>
+          <div class="min-w-0">
+            <label for="filtre-matiere" class="mb-2 block text-sm font-bold text-[#102f70]">
+              Matière
+            </label>
+            <select id="filtre-matiere" name="matiere"
+              class="min-h-11 w-full rounded-lg border bg-white px-3 text-sm text-[#102f70] focus:outline-2 ">
+              <option value="">Toutes les matières</option>
+              <option value="mathematiques">Mathématiques</option>
+              <option value="physique">Physique-Chimie</option>
+              <option value="francais">Français</option>
+              <option value="anglais">Anglais</option>
+              <option value="arabe">Arabe</option>
+            </select>
+          </div>
+
+          <div class="min-w-0 sm:col-span-2 lg:col-span-1">
+            <label for="recherche-cours" class="mb-2 block text-sm font-bold text-[#102f70]">
+              Rechercher un cours
+            </label>
+            <input id="recherche-cours" name="recherche" type="search" placeholder="Ex. : Mathématiques"
+              class="min-h-11 w-full rounded-lg border border-slate-300 px-3 text-sm text-slate-800 focus:outline-2 focus:outline-[#102f70]">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-[#102f70] px-4 py-7 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+
+        <div class="flex items-center  gap-2">
+          <a href="index.html"><img class="w-10 h-10" src="images/noor_academy_2026.webp" alt="logo"></a>
+          <a class="text-sm font-extrabold sm:text-base" href="index.html">Nour Academy</a>
+        </div>
+
+        <p class="text-sm text-blue-100">
+          Apprendre, réussir, grandir.
+        </p>
+
+      </div>
+
+      <div class="mt-5 border-t border-white/20 pt-4">
+        <p class="text-center text-xs leading-5 text-blue-100">
+          © 2026 Nour Academy — Tous droits réservés.
+        </p>
+      </div>
+
+    </div>
+  </footer>
 
 
+   <script src="script.js"></script>
 
-
-    <script type="module" src="/script.js"></script>
 </body>
+
 </html>
