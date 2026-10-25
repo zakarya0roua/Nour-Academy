@@ -6,54 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#102f70">
   <meta name="description" content="Nour Academy : cours de soutien scolaire et langues à Nador, du primaire au Bac.">
+
   <title>Nour Academy</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="min-h-screen bg-[#0b2e59] font-sans text-white">
 
   <!-- HEADER -->
-  <header class="bg-[#102f70] h-16">
-    <nav class="mx-3  flex items-center justify-between gap-7 px-4 sm:px-6 lg:px-8">
-
-      <div class="flex items-center  gap-2">
-        <a href="index.html"><img class="w-10 h-10" src="images/noor_academy_2026.webp" alt="logo"></a>
-        <a class="text-sm font-extrabold sm:text-base" href="index.html">Nour Academy</a>
+  <header class="bg-[#102f70]">
+    <nav class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2">
+        <a href="index.html">
+          <img class="h-10 w-10" src="images/noor_academy_2026.webp" alt="Logo Nour Academy">
+        </a>
+        <a href="index.html" class="text-sm font-extrabold sm:text-base">
+          Nour Academy
+        </a>
       </div>
-
-      <a href="#catalogue"
-        class="inline-flex min-h-11 items-center justify-between rounded-full bg-[#ffd34e] px-4 text-sm font-bold text-[#102f70] transition hover:bg-[#ffd34e] sm:px-6">
-        Mon panier (0)
+      <a href="#panier"
+        class="inline-flex min-h-11 items-center justify-center rounded-full bg-[#ffd34e] px-4 text-sm font-bold text-[#102f70] sm:px-6">
+        Mon panier (<span id="nombre-panier">0</span>)
       </a>
-
     </nav>
   </header>
-
   <main>
     <section id="accueil" class="px-4 sm:px-6 lg:px-8">
       <div
-        class="relative mx-auto flex min-h-[400px] max-w-7xl items-center overflow-hidden bg-[#0b2e59] bg-[url('images/banner_sans_texte.webp')] bg-cover bg-[center_65%] bg-no-repeat sm:min-h-[480px] lg:min-h-[560px] lg:bg-center">
-
-        <div class="relative z-10 w-full max-w-2xl px-1 py-10 sm:px-4 sm:py-12 lg:max-w-[58%] lg:py-16">
-          <p
-            class="text-[10px] font-bold uppercase tracking-[0.15em] text-[#ffd34e] sm:text-xs sm:tracking-[0.18em] lg:text-sm">
+        class="mx-auto flex min-h-[400px] max-w-7xl items-center overflow-hidden bg-[#0b2e59] bg-[url('images/banner_sans_texte.webp')] bg-cover bg-center bg-no-repeat sm:min-h-[480px] lg:min-h-[560px]">
+        <div class="w-full max-w-2xl py-10 sm:px-4 sm:py-12 lg:max-w-[58%]">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#ffd34e] sm:text-sm">
             Votre réussite, notre priorité
           </p>
-          <h1 class="mt-4 max-w-xl text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl">
+
+          <h1 class="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
             Construisez votre avenir avec
             <span class="text-[#ffd34e]">Nour Academy.</span>
           </h1>
+
           <p class="mt-4 max-w-lg text-sm leading-6 text-blue-100 sm:text-base sm:leading-7">
             Des cours de soutien scolaire et de langues pour accompagner chaque élève du primaire au Bac.
           </p>
+
           <a href="#catalogue"
-            class="mt-6 inline-flex min-h-11 max-w-full items-center justify-center rounded-full bg-[#ffd34e] px-5 py-2 text-center text-xs font-extrabold text-[#102f70] transition hover:bg-yellow-300 sm:px-6 sm:text-sm">
+            class="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-[#ffd34e] px-6 py-3 text-sm font-extrabold text-[#102f70] hover:bg-yellow-300">
             Découvrir nos cours →
           </a>
+
         </div>
       </div>
+
     </section>
-    <section id="catalogue" class="bg-[#0b2e59] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+
+    <section id="catalogue" class="px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <div class="mx-auto mb-8 max-w-2xl text-center">
           <p class="text-xs font-bold uppercase tracking-widest text-[#ffd34e]">
@@ -66,79 +71,187 @@
             Trouvez la matière et le niveau qui correspondent aux besoins de votre enfant.
           </p>
         </div>
-        <!-- FILTRES -->
-        <div id="filtres"
-          class="mb-6 grid grid-cols-1 gap-4 rounded-xl bg-white p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
 
-          <div class="min-w-0">
-            <label for="filtre-niveau" class="mb-2 block text-sm font-bold text-[#102f70]">
+        <div id="filtres"
+          class="mb-6 grid grid-cols-1 gap-4 rounded-xl bg-white p-4 text-[#102f70] sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
+          <div>
+            <label for="filtre-niveau" class="mb-2 block text-sm font-bold">
               Niveau scolaire
             </label>
             <select id="filtre-niveau" name="niveau"
-              class="min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-800 focus:outline-2 focus:outline-[#102f70]">
+              class="min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm">
               <option value="">Tous les niveaux</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filtre-matiere" class="mb-2 block text-sm font-bold">
+              Matière
+            </label>
+            <select id="filtre-matiere" name="matiere"
+              class="min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-sm">
+              <option value="">Toutes les matières</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="courses" class="grid grid-cols-1 gap-5 md:grid-cols-3  ">
+
+        </div>
+
+        <div id="panier" class="mt-12 rounded-xl bg-white p-5 text-[#102f70] sm:p-7">
+
+          <h3 class="text-xl font-extrabold">
+            Ma sélection de cours
+          </h3>
+
+          <p class="mt-2 text-sm text-slate-600">
+            Retrouvez ici les cours choisis pour votre enfant.
+          </p>
+
+          <div id="liste-panier" class="mt-4">
+            <p class="text-sm text-slate-500">
+              Aucun cours sélectionné.
+            </p>
+          </div>
+
+          <p class="mt-5 font-bold">
+            Total mensuel :
+            <span id="total-panier">0 MAD / mois</span>
+          </p>
+
+          <a href="#inscription"
+            class="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-[#ffd34e] px-6 py-3 text-sm font-bold text-[#102f70] hover:bg-yellow-300">
+            Continuer l'inscription →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+    <section id="inscription" class="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div class="mx-auto max-w-4xl rounded-2xl bg-[#102f70] p-5 sm:p-8 lg:p-12">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl font-extrabold text-[#ffd34e] sm:text-3xl">
+            Formulaire d'inscription
+          </h2>
+          <p class="mt-3 text-sm leading-6 text-blue-100">
+            Remplissez les informations nécessaires pour préparer votre dossier.
+          </p>
+        </div>
+        <form id="form-inscription" class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div>
+            <label for="nom-parent" class="mb-2 block text-sm font-bold">
+              Nom du parent
+            </label>
+            <input type="text" id="nom-parent" name="nomParent" placeholder="Votre nom complet" autocomplete="name"
+              required class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+            <p id="erreur-nom-parent" class="mt-1 text-sm text-red-300"></p>
+          </div>
+          <div>
+            <label for="email" class="mb-2 block text-sm font-bold">
+              Email
+            </label>
+            <input type="email" id="email" name="email" placeholder="exemple@email.com" autocomplete="email" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+            <p id="erreur-email" class="mt-1 text-sm text-red-300"></p>
+          </div>
+          <div>
+            <label for="telephone" class="mb-2 block text-sm font-bold">
+              Téléphone
+            </label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06XXXXXXXX" autocomplete="tel" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+            <p id="erreur-telephone" class="mt-1 text-sm text-red-300"></p>
+          </div>
+          <div>
+            <label for="prenom-eleve" class="mb-2 block text-sm font-bold">
+              Prénom de l'élève
+            </label>
+            <input type="text" id="prenom-eleve" name="prenomEleve" placeholder="Prénom de votre enfant" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+            <p id="erreur-prenom-eleve" class="mt-1 text-sm text-red-300"></p>
+          </div>
+          <div>
+            <label for="niveau-eleve" class="mb-2 block text-sm font-bold">
+              Niveau scolaire
+            </label>
+            <select id="niveau-eleve" name="niveauEleve" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+              <option value="">Choisir un niveau</option>
               <option value="primaire">Primaire</option>
               <option value="college">Collège</option>
               <option value="lycee">Lycée</option>
               <option value="bac">2e Bac</option>
             </select>
+            <p id="erreur-niveau-eleve" class="mt-1 text-sm text-red-300"></p>
           </div>
-          <div class="min-w-0">
-            <label for="filtre-matiere" class="mb-2 block text-sm font-bold text-[#102f70]">
-              Matière
+          <div>
+            <label for="mot-de-passe" class="mb-2 block text-sm font-bold">
+              Mot de passe
             </label>
-            <select id="filtre-matiere" name="matiere"
-              class="min-h-11 w-full rounded-lg border bg-white px-3 text-sm text-[#102f70] focus:outline-2 ">
-              <option value="">Toutes les matières</option>
-              <option value="mathematiques">Mathématiques</option>
-              <option value="physique">Physique-Chimie</option>
-              <option value="francais">Français</option>
-              <option value="anglais">Anglais</option>
-              <option value="arabe">Arabe</option>
-            </select>
+            <input type="password" id="mot-de-passe" name="motDePasse" autocomplete="new-password"
+              placeholder="8 caractères minimum" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900">
+            <p id="erreur-mot-de-passe" class="mt-1 text-sm text-red-300"></p>
           </div>
-
-          <div class="min-w-0 sm:col-span-2 lg:col-span-1">
-            <label for="recherche-cours" class="mb-2 block text-sm font-bold text-[#102f70]">
-              Rechercher un cours
+          <div class="sm:col-span-2">
+            <label for="confirmation" class="mb-2 block text-sm font-bold">
+              Confirmer le mot de passe
             </label>
-            <input id="recherche-cours" name="recherche" type="search" placeholder="Ex. : Mathématiques"
-              class="min-h-11 w-full rounded-lg border border-slate-300 px-3 text-sm text-slate-800 focus:outline-2 focus:outline-[#102f70]">
+            <input type="password" id="confirmation" name="confirmation" autocomplete="new-password"
+              placeholder="Répéter le mot de passe" required
+              class="min-h-11 w-full rounded-md bg-white px-3 text-sm text-gray-900 sm:max-w-md">
+            <p id="erreur-confirmation" class="mt-1 text-sm text-red-300"></p>
           </div>
-
-        </div>
+          <div class="sm:col-span-2">
+            <label for="consentement" class="flex items-start gap-3 text-sm leading-6 text-blue-100">
+              <input type="checkbox" id="consentement" name="consentement" required
+                class="mt-1 h-4 w-4 shrink-0 accent-yellow-400">
+              <span>
+                J'accepte l'utilisation de mes données pour traiter mon inscription.
+                Mes informations seront utilisées uniquement dans ce cadre.
+              </span>
+            </label>
+            <p id="erreur-consentement" class="mt-1 text-sm text-red-300"></p>
+          </div>
+          <div class="sm:col-span-2 sm:text-center">
+            <button type="submit"
+              class="min-h-11 w-full rounded-full bg-[#45c8df] px-6 py-3 font-bold text-[#102f70] hover:bg-cyan-300 sm:w-auto sm:min-w-56">
+              Envoyer mon inscription
+            </button>
+          </div>
+        </form>
+        <div id="confirmation-inscription" class="mt-6" aria-live="polite"></div>
       </div>
     </section>
-
   </main>
-
   <footer class="bg-[#102f70] px-4 py-7 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-6xl">
-
       <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-
-        <div class="flex items-center  gap-2">
-          <a href="index.html"><img class="w-10 h-10" src="images/noor_academy_2026.webp" alt="logo"></a>
-          <a class="text-sm font-extrabold sm:text-base" href="index.html">Nour Academy</a>
+        <div class="flex items-center gap-2">
+          <a href="index.html">
+            <img class="h-10 w-10" src="images/noor_academy_2026.webp" alt="Logo Nour Academy">
+          </a>
+          <a href="index.html" class="text-sm font-extrabold">
+            Nour Academy
+          </a>
         </div>
-
-        <p class="text-sm text-blue-100">
+        <p class="text-sm text-white">
           Apprendre, réussir, grandir.
         </p>
-
       </div>
-
-      <div class="mt-5 border-t border-white/20 pt-4">
-        <p class="text-center text-xs leading-5 text-blue-100">
+      <div class="mt-5 border-t border-blue-300 pt-4">
+        <p class="text-center text-xs leading-5 text-white">
           © 2026 Nour Academy — Tous droits réservés.
         </p>
       </div>
-
     </div>
   </footer>
 
 
-   <script src="script.js"></script>
+  <script type ="module" src="script.js"></script>
 
 </body>
 
