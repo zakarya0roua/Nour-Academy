@@ -7,12 +7,12 @@ function creatCards(data = cours) {
     for (let i = 0; i < data.length; i++) {
         div.innerHTML += `
         <div class=" rounded-2xl flex gap-2  flex-col w-full bg-cyan-800 shadow-2xs  p-4  border-2 border-amber-100">
-            <h1 class="flex justify-center  bg-blue-50 text-black text-xl font-extrabold">Cour ${i + 1}</h1>
+            <h1 class="flex justify-center  bg-blue-50 text-black text-xl font-extrabold">Cour ${i + 1} de la matiere ${data[i].matiere}</h1>
             <div class=" bg-cyan-700 w-full flex justify-between py-2 ">
               <span class="px-4">Matiere: </span>
               <span class="mr-20">${data[i].matiere}</span>
             </div>
-            <div class=" bg-cyan-700 w-full flex justify-betw ${data[i].niveau}een py-2 gap-9">
+            <div class=" bg-cyan-700 w-full flex justify-between py-2">
               <span class="px-4">Niveau: </span>
               <span class="mr-20">  ${data[i].niveau}</span>
             </div>
@@ -24,8 +24,8 @@ function creatCards(data = cours) {
               <span class=" px-4">Prix: </span>
               <span class="mr-20"> ${data[i].prix} DHs</span>
             </div>
-            <div class="w-fut  flex justify-center">
-              <button class="w-[200px] h-[40px] bg-green-400 rounded-[0.5rem] cursor-pointer hover:bg-green-800">Inscription</button>
+            <div  class="w-fut  flex justify-center">
+              <button id="inscription" class="w-[200px] h-[40px] bg-green-400 rounded-[0.5rem] cursor-pointer hover:bg-green-800">Inscription</button>
             </div>
           </div>
        `
@@ -88,3 +88,4 @@ function filterData(event1, event2) {
   }
    return creatCards(xx)
 }
+
