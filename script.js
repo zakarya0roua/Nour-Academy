@@ -152,10 +152,10 @@ div.addEventListener("click", (event) => {
   const coursChoisi = cours.find((c) => String(c.id) === idBouton);
   if(!coursChoisi) return;
   const dejaChoisi = arrIns.some((c) =>c.matiere === coursChoisi.matiere &&c.niveau === coursChoisi.niveau);
-  if(dejaChoisi) {
-    alert("Cette matière est déjà sélectionnée pour ce niveau.");
-    return;
-  }
+  
+  bouton.className = "w-[200px] h-[40px] bg-green-200 rounded-lg cursor-pointer hover:bg-green-300 text-black"
+  bouton.textContent = "carte selectionner"
+
   arrIns.push(coursChoisi);
   afficherPanier();
 });
